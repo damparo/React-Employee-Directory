@@ -14,6 +14,16 @@ class App extends React.Component {
     }
   };
 
+  
+  handleSearchChange(event) {
+
+    const { value } = event.target;
+    // const employeeSearch = event.target.value
+
+  const everyone = this.state.data.filter(employee => Object.values(employee) !== undefined)
+    
+  };
+
   handleSearch(e) {
     e.preventDefault();
     // console.log("hello");
@@ -22,6 +32,22 @@ class App extends React.Component {
     this.setState({
       data: officePerson
     })
+
+    const handle = this.state.value
+    const handleOfPerson = this.state.data.filter(employee => employee.handle === handle)
+    this.setState({
+      data: handleOfPerson
+    })
+
+
+    const roles = this.state.value
+    const roleOfPerson = this.state.data.filter(employee => employee.roles !== undefined)
+    this.setState({
+      data: roleOfPerson
+    })
+
+    
+
   }
 
   handleChange(e)  {

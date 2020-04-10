@@ -1,5 +1,7 @@
 .Banner {
-    border-style: solid;
-    border-color: blueviolet;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom-style: solid;
+    border-color: black;
     text-align: center;
 }

@@ -1,6 +1,12 @@
 [
     {"number": "1", "name": "Stanley", "lastname": "Hudson", "roles": "salesman", "handle": "chocopretzel"},
-    {"number": "2","name": "Oscar", "lastname": "Munoz", "roles": "salesman", "handle": "chocopretzel"},
-    {"number": "3", "name": "Jim", "lastname": "Helpert", "roles": "salesman", "handle": "chocopretzel"}
+    {"number": "2","name": "Oscar", "lastname": "Munoz", "roles": "accountant", "handle": "oxford"},
+    {"number": "3", "name": "Jim", "lastname": "Helpert", "roles": "salesman", "handle": "hamsammie"},
 
+    {"number": "4", "name": "David", "lastname": "Wallace", "handle": "drumdrum"},
+
+
+    {"number": "5", "name": "Kevin", "lastname": "Maloney", "roles": "accountant", "handle": "weddingsinger"},
+    {"number": "6", "name": "Michael", "lastname": "Scott", "roles": "manager", "handle": "tobysucks"},
+    {"number": "7", "name": "Pam", "lastname": "Beasely", "handle": "artschool"} 
 ]
