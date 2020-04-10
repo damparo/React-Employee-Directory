@@ -14,54 +14,28 @@ class App extends React.Component {
     }
   };
 
-  
-  handleSearchChange(event) {
-
-    const { value } = event.target;
-    // const employeeSearch = event.target.value
-
-  const everyone = this.state.data.filter(employee => Object.values(employee) !== undefined)
-    
-  };
-
-  handleSearch(e) {
-    e.preventDefault();
-    // console.log("hello");
-    const name = this.state.value
-    const officePerson = this.state.data.filter(employee => employee.name === name)
-    this.setState({
-      data: officePerson
-    })
-
-    const handle = this.state.value
-    const handleOfPerson = this.state.data.filter(employee => employee.handle === handle)
-    this.setState({
-      data: handleOfPerson
-    })
-
-
-    const roles = this.state.value
-    const roleOfPerson = this.state.data.filter(employee => employee.roles !== undefined)
-    this.setState({
-      data: roleOfPerson
-    })
-
-    
-
-  }
-
   handleChange(e)  {
     this.setState({
-      value: e.target.value
+      value: e.target.value.toLowerCase()
     })
   }
 
 
   render() {
+    const employees = this.state.data.filter(employee => {
+      const keys = Object.values(employee);
+  
+      for(let  i = 0; i < keys.length; i++){
+        if(keys[i].toLowerCase().includes(this.state.value)){
+          return true;
+        }
+      }
+      return false;
+    })
     return (
       <div className="container">
         <Banner />
-        <form onSubmit={(e) => this.handleSearch(e)}>
+        <form>
           <label>
             Name:
             <input
@@ -84,7 +58,7 @@ class App extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map((employee) => (
+            {employees.map((employee) => (
               <Employee
                 key={employee.number}
                 number={employee.number}
