@@ -1,0 +1,6 @@
+[
+    {"number": "1", "name": "Stanley", "lastname": "Hudson", "roles": "salesman", "handle": "chocopretzel"},
+    {"number": "2","name": "Oscar", "lastname": "Munoz", "roles": "salesman", "handle": "chocopretzel"},
+    {"number": "3", "name": "Jim", "lastname": "Helpert", "roles": "salesman", "handle": "chocopretzel"}
+
+]
